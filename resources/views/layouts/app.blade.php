@@ -18,6 +18,7 @@
 
         main {
             height: 100%;
+            overflow: hidden;
         }
 
         ul.side-nav.fixed li.logo:hover, ul.side-nav.fixed li.logo #logo-container:hover {
@@ -68,7 +69,7 @@
             font-size: 1.6rem;
         }
 
-        @media only screen and (min-width: 601px){
+        @media only screen and (min-width: 601px) {
             nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
                 height: 30px;
                 line-height: 30px;
@@ -98,6 +99,7 @@
             </li>
             <li><div class="divider"></div></li>
             <li><a class="waves-effect" href="{{ route('report', 'asd') }}">Report</a></li>
+            <li><a class="waves-effect" href="{{ route('test') }}">TEST</a></li>
             <li><a class="waves-effect" href="{{ route('logout') }}"><i class="material-icons">power_settings_new</i>Logout</a></li>
         </ul>
     </header>
