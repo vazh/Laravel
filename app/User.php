@@ -10,12 +10,19 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'tbl_anggota';
+
+    /**
+     * The attributes that aren't mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
+    protected $guarded = [
+        'flag_akses', 'flag_tanggapan'
     ];
 
     /**
@@ -24,6 +31,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+      'no_nasabah', 'simpanan_pokok', 'simpanan_smk', 'lembar_smk', 'status', 'status_cetak',
+      'register_user', 'register_date', 'last_user', 'last_date', 'no_rekening1', 'status_channeling',
+      'kode_produk', 'no_rek_tabungan', 'status_setoran_wajib', 'kode_ref', 'alasan_ttp',
+      'kode_akses',
     ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 }
